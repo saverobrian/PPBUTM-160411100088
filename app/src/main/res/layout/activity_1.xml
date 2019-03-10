@@ -8,16 +8,8 @@
     android:padding="20dp"
     tools:context=".MainActivity">
 
-    <Button
-        android:onClick="home"
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="HOME"
-        />
-
     <TextView
-        android:id="@+id/main1No1Judul"
+        android:id="@+id/Act1No1Judul"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text='Nomor 1'
@@ -25,22 +17,22 @@
         />
 
     <EditText
-        android:id="@+id/main1No1Edit"
+        android:id="@+id/Act1No1Edit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="text"
         />
 
     <Button
-        android:onClick="main1No1Button"
-        android:id="@+id/main1No1Button"
+        android:onClick="Act1No1Button"
+        android:id="@+id/Act1No1Button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Tampilkan"
         />
 
     <TextView
-        android:id="@+id/main1No1Hasil"
+        android:id="@+id/Act1No1Hasil"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text='Hasil Nomor 1'
@@ -49,7 +41,7 @@
         />
 
     <TextView
-        android:id="@+id/main1No2Judul"
+        android:id="@+id/Act1No2Judul"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text='Nomor 2'
@@ -57,29 +49,29 @@
         />
 
     <EditText
-        android:id="@+id/main1No2Edit1"
+        android:id="@+id/Act1No2Edit1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Berat Badan"
         />
 
     <EditText
-        android:id="@+id/main1No2Edit2"
+        android:id="@+id/Act1No2Edit2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Tinggi Badan"
         />
 
     <Button
-        android:onClick="main1No2Button"
-        android:id="@+id/main1No2Button"
+        android:onClick="Act1No2Button"
+        android:id="@+id/Act1No2Button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Hitung"
         />
 
     <TextView
-        android:id="@+id/main1No2Hasil"
+        android:id="@+id/Act1No2Hasil"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text='Hasil Nomor 2'

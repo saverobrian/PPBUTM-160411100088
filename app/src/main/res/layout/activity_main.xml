@@ -17,15 +17,13 @@
         />
 
     <Button
-        android:onClick="klikButtonMain1"
-        android:id="@+id/button"
+        android:id="@+id/buttonAct1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="satu"
         />
     <Button
-        android:onClick="klikButtonMain2"
-        android:id="@+id/button"
+        android:id="@+id/button2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="dua"
