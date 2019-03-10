@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    //baru
+    //baru...
     EditText main1No1Edit;
     Button main1No1Button;
     TextView main1No1Hasil;
