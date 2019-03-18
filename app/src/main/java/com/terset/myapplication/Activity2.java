@@ -288,11 +288,12 @@ public class Activity2 extends AppCompatActivity {
         Resources res = context.getResources();
         Configuration config = new Configuration(res.getConfiguration());
         if (Build.VERSION.SDK_INT >= 17) {
-            config.setLocale(locale);
+            //config.setLocale(locale);
             //context = context.createConfigurationContext(config);
         } else {
             config.locale = locale;
         }
+        config.locale = locale;
         res.updateConfiguration(config, res.getDisplayMetrics());
 
         SharedPreferences.Editor editor = getSharedPreferences("settings", MODE_PRIVATE).edit();
