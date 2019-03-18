@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".Activity2"
+>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="1"
+            android:scaleType="centerCrop"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/Act2NamaPemesan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/image"
+            android:padding="10dp"
+            android:text="@string/nama_pemesan"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/Act2EditNama"
+            android:hint="@string/masukan_nama"
+            android:textAlignment="center"
+            android:layout_below="@id/Act2NamaPemesan"
+            android:layout_centerHorizontal="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            />
+
+        <LinearLayout
+            android:id="@+id/Act2MenuCoffe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:orientation="vertical"
+            android:layout_below="@id/Act2EditNama">
+            <TextView
+                android:id="@+id/Act2MenuCoffeJudul"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/menu_coffe"
+                />
+
+            <CheckBox
+                android:id="@+id/Act2MenuCoffeCBox1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Arabica"/>
+
+            <CheckBox
+                android:id="@+id/Act2MenuCoffeCBox2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Robusta"/>
+
+            <CheckBox
+                android:id="@+id/Act2MenuCoffeCBox3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="American"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Act2Sajian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/Act2EditNama"
+            android:layout_centerHorizontal="true"
+            >
+            <TextView
+                android:id="@+id/Act2SajianJudul"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sajian"
+                tools:layout_editor_absoluteX="176dp"
+                tools:layout_editor_absoluteY="356dp"
+                />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Act2SajianRGroup">
+                <RadioButton
+                    android:id="@+id/Act2SajianRButton1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hangat"/>
+
+                <RadioButton
+                    android:id="@+id/Act2SajianRButton2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dingin"/>
+
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Act2Bahasa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/act2Pesan"
+            >
+            <TextView
+                android:id="@+id/Act2BahasaJudul"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bahasa"
+                />
+
+            <RadioGroup
+                android:id="@+id/Act2BahasaRGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/Act2BahasaRButton1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Indonesia"/>
+
+                <RadioButton
+                    android:id="@+id/Act2BahasaRButton2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="English"/>
+            </RadioGroup>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/Act2LayoutJumlah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Act2MenuCoffe"
+            android:layout_centerHorizontal="true"
+            >
+            <Button
+                android:id="@+id/act2JumlahMin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="-"
+                android:layout_toLeftOf="@+id/act2Jumlah"
+                />
+            <EditText
+                android:id="@+id/act2Jumlah"
+                android:textSize="50dp"
+                android:maxLength="4"
+                android:layout_margin="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:inputType="number"
+                android:background="@null"
+                android:layout_centerHorizontal="true"/>
+            <Button
+                android:id="@+id/act2JumlahPlus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="+"
+                android:layout_toRightOf="@+id/act2Jumlah"
+                />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/act2Total"
+            android:text="TOTAL : "
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Act2LayoutJumlah"
+            />
+
+        <EditText
+            android:id="@+id/act2Bayar"
+            android:hint="@string/bayar"
+            android:textAlignment="center"
+            android:inputType="number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/act2Total"/>
+
+        <Button
+            android:id="@+id/act2Pesan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/pesan"
+            android:layout_below="@+id/act2Bayar"
+
+            />
+    </RelativeLayout>
+
+
+
+</ScrollView>

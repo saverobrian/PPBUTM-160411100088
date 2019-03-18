@@ -20,13 +20,13 @@
         android:id="@+id/buttonAct1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="satu"
+        android:text="@string/satu"
         />
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/buttonAct2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="dua"
+        android:text="@string/dua"
         />
 
 </LinearLayout>

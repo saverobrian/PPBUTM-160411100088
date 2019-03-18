@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">My Application</string>
+
+    <string name="nama_pemesan">Customer Name</string>
+    <string name="masukan_nama">Insert Name</string>
+    <string name="menu_coffe">Menu Coffe</string>
+    <string name="sajian">Serve</string>
+    <string name="hangat">Warm</string>
+    <string name="dingin">Cold</string>
+    <string name="bayar">Payment</string>
+    <string name="pesan">Order</string>
+    <string name="bahasa">Languange</string>
+
+    <string name="pesanan">Order</string>
+    <string name="jumlah">Amount</string>
+    <string name="kembalian">Change</string>
+
+    <string name="satu">One</string>
+    <string name="dua">Two</string>
+    <string name="tiga">Three</string>
+</resources>

@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">My Application</string>
+
+    <string name="nama_pemesan">Nama Pemesan</string>
+    <string name="masukan_nama">Masukan Nama</string>
+    <string name="menu_coffe">Menu Coffe</string>
+    <string name="sajian">Sajian</string>
+    <string name="hangat">Hangat</string>
+    <string name="dingin">Dingin</string>
+    <string name="bayar">bayar</string>
+    <string name="pesan">Pesan</string>
+    <string name="bahasa">Bahasa</string>
+
+    <string name="pesanan">Pesanan</string>
+    <string name="jumlah">Jumlah</string>
+    <string name="kembalian">Kembalian</string>
+
+    <string name="satu">Satu</string>
+    <string name="dua">Dua</string>
+    <string name="tiga">Tiga</string>
+
 </resources>
