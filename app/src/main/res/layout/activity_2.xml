@@ -121,7 +121,7 @@
             android:orientation="horizontal"
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
-            android:layout_below="@id/act2Pesan"
+            android:layout_below="@id/act2Hubungi"
             >
             <TextView
                 android:id="@+id/Act2BahasaJudul"
@@ -208,6 +208,14 @@
             android:layout_height="wrap_content"
             android:text="@string/pesan"
             android:layout_below="@+id/act2Bayar"
+
+            />
+        <Button
+            android:id="@+id/act2Hubungi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/hubungi"
+            android:layout_below="@+id/act2Pesan"
 
             />
     </RelativeLayout>

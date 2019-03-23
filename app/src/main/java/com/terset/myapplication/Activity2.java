@@ -1,12 +1,16 @@
 package com.terset.myapplication;
 
+import android.Manifest;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.content.res.Resources;
+import android.net.Uri;
 import android.os.Build;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
@@ -45,6 +49,7 @@ public class Activity2 extends AppCompatActivity {
     EditText act2Bayar;
 
     Button act2Pesan;
+    Button act2Hubungi;
 
     RadioGroup Act2BahasaRGroup;
     RadioButton Act2BahasaRButton1, Act2BahasaRButton2;
@@ -175,6 +180,20 @@ public class Activity2 extends AppCompatActivity {
             }
         });
 
+        act2Hubungi = (Button) findViewById(R.id.act2Hubungi);
+        act2Hubungi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Intent callIntent = new Intent(Intent.ACTION_DIAL);
+                Intent callIntent = new Intent(Intent.ACTION_CALL);
+                callIntent.setData(Uri.parse("tel:037777700"));
+                if(ActivityCompat.checkSelfPermission(getBaseContext(), Manifest.permission.CALL_PHONE) == PackageManager.PERMISSION_DENIED){
+                    return;
+                }
+                startActivity(callIntent);
+            }
+        });
+
         Act2BahasaJudul = (TextView) findViewById(R.id.Act2BahasaJudul);
         Act2BahasaRGroup  = (RadioGroup) findViewById(R.id.Act2BahasaRGroup);
         Act2BahasaRButton1 = (RadioButton) findViewById(R.id.Act2BahasaRButton1);
@@ -288,12 +307,11 @@ public class Activity2 extends AppCompatActivity {
         Resources res = context.getResources();
         Configuration config = new Configuration(res.getConfiguration());
         if (Build.VERSION.SDK_INT >= 17) {
-            //config.setLocale(locale);
-            //context = context.createConfigurationContext(config);
+            config.setLocale(locale);
+            context = context.createConfigurationContext(config);
         } else {
             config.locale = locale;
         }
-        config.locale = locale;
         res.updateConfiguration(config, res.getDisplayMetrics());
 
         SharedPreferences.Editor editor = getSharedPreferences("settings", MODE_PRIVATE).edit();

@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
     public void openActivity2(){
-        Intent intent = new Intent(this, Activity2.class);
+        Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
     }
     @Override

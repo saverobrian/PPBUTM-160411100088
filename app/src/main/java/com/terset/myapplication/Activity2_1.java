@@ -20,6 +20,7 @@ public class Activity2_1 extends AppCompatActivity {
     TextView Act2_2TView5;
     TextView Act2_2TView6;
     TextView Act2_2TView7;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
