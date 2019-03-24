@@ -10,7 +10,9 @@ import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Build;
+import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
@@ -31,6 +33,9 @@ import java.util.Locale;
 import java.util.Objects;
 
 public class Activity2 extends AppCompatActivity {
+    private static  final int REQUEST_CALL = 1;
+
+
     EditText Act2EditNama;
 
     CheckBox Act2MenuCoffeCBox1, Act2MenuCoffeCBox2, Act2MenuCoffeCBox3;
@@ -185,12 +190,7 @@ public class Activity2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //Intent callIntent = new Intent(Intent.ACTION_DIAL);
-                Intent callIntent = new Intent(Intent.ACTION_CALL);
-                callIntent.setData(Uri.parse("tel:037777700"));
-                if(ActivityCompat.checkSelfPermission(getBaseContext(), Manifest.permission.CALL_PHONE) == PackageManager.PERMISSION_DENIED){
-                    return;
-                }
-                startActivity(callIntent);
+                MakePhoneCall();
             }
         });
 
@@ -325,5 +325,28 @@ public class Activity2 extends AppCompatActivity {
         SharedPreferences prefs = getSharedPreferences("settings", Activity.MODE_PRIVATE);
         String languange = prefs.getString("My_Lang", "");
         setLocale(context, ""+languange);
+    }
+
+    public void MakePhoneCall(){
+        if(ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED){
+            Toast.makeText(getBaseContext(), ""+Manifest.permission.CALL_PHONE, Toast.LENGTH_SHORT).show();
+            ActivityCompat.requestPermissions(Activity2.this, new String[]{Manifest.permission.CALL_PHONE}, 1);
+        }
+        else{
+            Intent callIntent = new Intent(Intent.ACTION_CALL);
+            callIntent.setData(Uri.parse("tel:037777700"));
+            startActivity(callIntent);
+        }
+    }
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        if(requestCode == REQUEST_CALL){
+            if(grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
+                MakePhoneCall();
+            }
+            else{
+                Toast.makeText(this, "DENIED", Toast.LENGTH_SHORT).show();
+            }
+        }
     }
 }
