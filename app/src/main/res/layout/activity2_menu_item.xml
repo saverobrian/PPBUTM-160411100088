@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    android:alpha="0.75"
+    android:id="@+id/act2_menu_item">
+
+    <CheckBox
+        android:id="@+id/act2_menu_item_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:layout_marginRight="10dp"/>
+    <TextView
+        android:id="@+id/act2_menu_item_judul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Arabica"
+        android:textSize="30dp"
+        android:layout_toRightOf="@id/act2_menu_item_checkbox"/>
+    <TextView
+        android:id="@+id/act2_menu_item_jumlah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jumlah"
+        android:layout_alignParentRight="true"/>
+    <TextView
+        android:id="@+id/act2_menu_item_sajian"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dingin"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/act2_menu_item_jumlah"/>
+
+</RelativeLayout>

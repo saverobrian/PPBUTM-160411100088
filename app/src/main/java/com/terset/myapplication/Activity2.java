@@ -35,7 +35,6 @@ import java.util.Objects;
 public class Activity2 extends AppCompatActivity {
     private static  final int REQUEST_CALL = 1;
 
-
     EditText Act2EditNama;
 
     CheckBox Act2MenuCoffeCBox1, Act2MenuCoffeCBox2, Act2MenuCoffeCBox3;

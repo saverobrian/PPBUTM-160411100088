@@ -9,6 +9,7 @@ import android.content.res.Resources;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button buttonAct1;
     Button buttonAct2;
+    Button buttonAct4;
     TextView nama;
 
     @Override
@@ -43,6 +45,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        buttonAct4 = (Button) findViewById(R.id.buttonAct4);
+        buttonAct4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openActivity4();
+            }
+        });
+
         nama = findViewById(R.id.nama);
     }
 
@@ -51,6 +61,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
     public void openActivity2(){
+        Intent intent = new Intent(this, Activity2.class);
+        startActivity(intent);
+    }
+    public void openActivity4(){
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
     }

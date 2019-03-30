@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".Activity2">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:alpha="1"
+            android:scaleType="centerCrop"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/Act4NamaPemesan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/nama_pemesan"
+            android:textSize="10dp"
+            android:textStyle="bold"
+            android:layout_toRightOf="@id/image"
+            android:layout_above="@+id/Act4EditNama"/>
+
+        <EditText
+            android:id="@+id/Act4EditNama"
+            android:hint="@string/masukan_nama"
+            android:layout_centerHorizontal="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_toRightOf="@id/image"
+            android:layout_alignBottom="@id/image"
+            />
+
+
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_marginBottom="40dp"
+            android:layout_marginTop="40dp"
+            android:id="@+id/Act4RecycleView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Act4EditNama"
+            >
+        </android.support.v7.widget.RecyclerView>
+
+
+        <TextView
+            android:id="@+id/act4Total"
+            android:text="TOTAL : "
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Act4RecycleView"
+            />
+
+        <EditText
+            android:id="@+id/act4Bayar"
+            android:hint="@string/bayar"
+            android:textAlignment="center"
+            android:inputType="number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/act4Total"/>
+
+        <Button
+            android:id="@+id/act4Pesan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/pesan"
+            android:layout_below="@+id/act4Bayar"
+            />
+
+        <Button
+            android:id="@+id/act4Hubungi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/hubungi"
+            android:layout_below="@+id/act4Pesan"
+
+            />
+
+        <LinearLayout
+            android:id="@+id/Act4Bahasa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/act4Hubungi"
+            >
+            <TextView
+                android:id="@+id/Act4BahasaJudul"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bahasa"
+                />
+
+            <RadioGroup
+                android:id="@+id/Act4BahasaRGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/Act4BahasaRButton1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Indonesia"/>
+
+                <RadioButton
+                    android:id="@+id/Act4BahasaRButton2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="English"/>
+            </RadioGroup>
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>
