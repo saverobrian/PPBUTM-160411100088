@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     Button buttonAct2;
     Button buttonAct4;
     Button buttonAct5;
+    
     Button buttonAct6;
     TextView nama;
 
