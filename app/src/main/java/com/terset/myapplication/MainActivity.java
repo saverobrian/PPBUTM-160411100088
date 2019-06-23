@@ -21,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
     Button buttonAct1;
     Button buttonAct2;
     Button buttonAct4;
+    Button buttonAct5;
+    Button buttonAct6;
     TextView nama;
 
     @Override
@@ -53,6 +55,23 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        buttonAct5 = (Button) findViewById(R.id.buttonAct5);
+        buttonAct5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openActivity5();
+            }
+        });
+
+
+        buttonAct6 = (Button) findViewById(R.id.buttonAct6);
+        buttonAct6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openActivity6();
+            }
+        });
+
         nama = findViewById(R.id.nama);
     }
 
@@ -68,6 +87,15 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
     }
+    public void openActivity5(){
+        Intent intent = new Intent(this, Activity5.class);
+        startActivity(intent);
+    }
+    public void openActivity6(){
+        Intent intent = new Intent(this, ActivityProject.class);
+        startActivity(intent);
+    }
+
     @Override
     public void onResume(){
         super.onResume();

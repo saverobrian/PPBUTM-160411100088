@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:id="@+id/projectItem_layout">
+
+    <TextView
+        android:id="@+id/projectItem_nama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Nama" />
+    <TextView
+        android:id="@+id/projectItem_harga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_alignParentRight="true"
+        android:text="Harga"/>
+    <TextView
+        android:id="@+id/projectItem_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_below="@id/projectItem_harga"
+        android:text="Detail \n Detail \n Detail"/>
+    <Button
+        android:id="@+id/projectItem_ButtonDel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        android:layout_below="@+id/projectItem_detail"/>
+</RelativeLayout>

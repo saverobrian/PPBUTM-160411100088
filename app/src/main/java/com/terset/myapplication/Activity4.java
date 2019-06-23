@@ -9,8 +9,10 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.content.res.Resources;
+import android.database.Cursor;
 import android.net.Uri;
 import android.os.Build;
+import android.provider.ContactsContract;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
@@ -127,13 +129,23 @@ public class Activity4 extends AppCompatActivity implements OnItemClick{
         mlist_jumlah.add("0");
         mlist_sajian.add("-");
 
+        //dataBase
+        DatabaseHelper myDb = new DatabaseHelper(this);
+        Cursor res = myDb.getAllData();
+        while (res.moveToNext()){
+            mlist_checkbox.add(false);
+            mlist_judul.add(res.getString(2));
+            mlist_jumlah.add("0");
+            mlist_sajian.add("-");
+        }
+
+
         mRecyclerView = findViewById(R.id.Act4RecycleView);
         mAdapter = new RecycleViewAdapter(this, mlist_checkbox, mlist_judul, mlist_jumlah, mlist_sajian, this);
         mRecyclerView.setAdapter(mAdapter);
         mLayoutManager = new LinearLayoutManager(this);
         Toast.makeText(this, "masuk", Toast.LENGTH_SHORT).show();
         mRecyclerView.setLayoutManager(mLayoutManager);
-
     }
     public void openActivity4_2(){
         Intent intent = new Intent(getBaseContext(), Activity4_2.class);

@@ -43,8 +43,6 @@
             android:layout_height="wrap_content"
             />
 
-
-
         <android.support.v7.widget.RecyclerView
             android:layout_marginBottom="40dp"
             android:layout_marginTop="40dp"
@@ -54,7 +52,6 @@
             android:layout_below="@+id/Act4EditNama"
             >
         </android.support.v7.widget.RecyclerView>
-
 
         <TextView
             android:id="@+id/act4Total"

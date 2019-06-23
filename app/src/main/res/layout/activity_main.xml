@@ -34,5 +34,18 @@
         android:layout_height="wrap_content"
         android:text="Empat"
         />
+    <Button
+        android:id="@+id/buttonAct5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lima"
+        />
+    <Button
+        android:id="@+id/buttonAct6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enam"
+        />
+
 
 </LinearLayout>

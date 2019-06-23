@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ActivityProject_insert">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pilih Tipe Processor"/>
+        <RadioGroup
+            android:id="@+id/projectInsert_GroupRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/projectInsert_RadioIntel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Intel"
+                android:checked="true"/>
+            <RadioButton
+                android:id="@+id/projectInsert_RadioAmd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AMD"/>
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pilih Socket"
+            android:textAlignment="center" />
+        <Spinner
+            android:id="@+id/projectInsert_SpinnerSocket"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"></Spinner>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+        <TextView
+            android:id="@+id/projectInsert_ProcessorText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Pilih Processor"/>
+        <Button
+            android:id="@+id/projectInsert_ProcessorPilih"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pilih"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+        <TextView
+            android:id="@+id/projectInsert_MotherBoardText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Pilih Motherboard"/>
+        <Button
+            android:id="@+id/projectInsert_MotherBoardPilih"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PILIH"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+        <TextView
+            android:id="@+id/projectInsert_GrahicCardText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Pilih Graphic Card"/>
+        <Button
+            android:id="@+id/projectInsert_GrahicCardPilih"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PILIH"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+        <TextView
+            android:id="@+id/projectInsert_MemoryText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Pilih Memory"/>
+        <Button
+            android:id="@+id/projectInsert_MemoryPilih"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PILIH"/>
+    </LinearLayout>
+
+</LinearLayout>

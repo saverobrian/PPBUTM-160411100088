@@ -27,6 +27,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Username"
+            android:text="b"
             android:padding="20dp"/>
 
         <EditText
@@ -34,6 +35,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Password"
+            android:text="1"
             android:inputType="textPassword"
             android:layout_below="@+id/LoginUserName"
             android:padding="20dp"/>

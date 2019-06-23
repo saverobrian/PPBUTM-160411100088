@@ -41,7 +41,6 @@ public class Activity4_1 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent resultIntent = new Intent();
-                resultIntent.putExtra("result", "result bro");
                 resultIntent.putExtra("index", index);
                 //resultIntent.putExtra("judul", judul);
                 resultIntent.putExtra("jumlah", act4_1Jumlah.getText().toString());
